@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Should you sell the car</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&display=swap"
+        rel="stylesheet">
+
+    <script src="https://kit.fontawesome.com/2ab53ed4ce.js" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="./css/style.css">
+
+</head>
+
+<body>
+    <div class="wrapper">
+        <h1>Sprawdź, czy powinnaś/eś sprzedać swój samochód</h1>
+        <p>Jeżeli podasz dane swojego samochodu, sprawdzisz jego wartość użytkową. Jeżeli Twój samochód posiada
+            przynajmnie
+            jedną z poniższych cech, oznacza to że jego wartość użytkowa jest niska i trzeba rozważyć jego sprzedaż:</p>
+        <ul>
+            <li>wiek pojazdu</li>
+            <li>przebieg pojazdu</li>
+            <li>częste wizyty w warsztacie na przestrzeni ostatnich 2 lat</li>
+            <li>poważna kolizja</li>
+        </ul>
+
+        <p class="error">Wypełnij poprawnie wszystkie pola</p>
+
+        <div class="info">
+            <label for="model" class="info__model">model samochodu:</label>
+            <input type="text" id="model" class="info__inputmodel">
+
+            <label for="year" class="info__year">rok produkcji:</label>
+            <input type="number" id="year" class="info__inputyear" min="0">
+
+            <label for="mileage" class="info__mileage">przebieg w kilometrach:</label>
+            <input type="number" id="mileage" class="info__inputmileage" min="0">
+
+            <label for="visit" class="info__visit">ilość wizyt w warsztacie w ostatnich 2 latach:</label>
+            <input type="number" id="visit" class="info__inputvisit" min="0">
+
+            <label for="accident" class="info__accident">Poważna kolizja:</label>
+            <select id="accident" class="info__select">
+                <option value="0" disabled selected>-wybierz-</option>
+                <option value="TAK">TAK</option>
+                <option value="NIE">NIE</option>
+            </select>
+        </div>
+
+        <div class="btns" onclick="void(0)">
+            <button class="btns__advice" onclick="void(0)">Sprawdź</button>
+            <button class="btns__clear" onclick="void(0)">Wyczyść</button>
+        </div>
+    </div>
+
+    <div class="advice">
+        <div class="advice__car">
+            <p>Marka pojazdu: <spam class="spambrand"></spam>
+            </p>
+            <p>Rok produkcji: <spam class="spamyear"></spam>
+            </p>
+            <p>Ilość lat: <spam class="spamage"></spam>
+            </p>
+            <p>Przebieg: <spam class="spammileage"></spam>
+            </p>
+            <p>Wizyty w warsztacie: <spam class="spamvisit"></spam>
+            </p>
+            <p>Poważna kolizja: <spam class="spamaccident"></spam>
+            </p>
+        </div>
+        <div class="advice__sell">
+            <h3>Informacja:</h3>
+            <p class="advice__sell--info"></p>
+            <p class="advice__sell--final"></p>
+        </div>
+    </div>
+
+
+
+    <script src="./js/script.js"></script>
+</body>
+
+</html>
